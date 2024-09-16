@@ -1,0 +1,75 @@
+//#include <iostream>;
+//#include "itchDefinitions.h";
+//#include "messageParser.h";
+//#include <fstream>;
+//#include <cstring>;
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <stdlib.h>
+#include <string.h>
+#include <arpa/inet.h>
+#include <errno.h>
+#include <memory.h>
+#include <stdio.h>
+#include </opt/itchTest/connection.h>
+#include </opt/itchTest/itchDefinitions.h>
+
+#define MAX_ITCH_BUFFER_SIZE		(1024 * 1024 * 2)
+#define MAX_ITCH_MESSAGE_COUNT		30000000
+
+int main() 
+{
+    int readLen = 0;
+    ulong sequence = 0;
+    ulong lastSequence = 0;
+    ushort messageCount = 0;
+    char *msgAddr = 0;
+    ushort messageLength = 0;
+    Itch::TItchMessage *firstMessage = 0;
+    Itch::TItchMessage *msg = 0;
+    Itch::TItchMessageBase *msgBase = 0;
+    int _multicastSocket;
+    int isFirstMessage = 1;
+    char *_bufferPtr;
+    char _buffer[MAX_ITCH_BUFFER_SIZE];
+    _bufferPtr = _buffer;
+
+    
+   sleep(30); 
+    
+    _multicastSocket = Lib::CConnection::createUdpMulticastSocket("233.113.216.65", 21001, "10.46.105.3");
+    
+    if (_multicastSocket<0)
+    {
+        printf("Final function code %d\n",_multicastSocket);
+        fflush(stdout);
+        return -1;
+    }
+    else
+    {
+        printf("Socket created %d\n",_multicastSocket);
+        while(1)
+        {
+            readLen = read(_multicastSocket, _bufferPtr, 65536);
+            printf("Read length %d\n",readLen);
+        }
+    }    
+
+    
+}
+    
+    
+
+
+
+    
+    
+    
+
+
+    
+
