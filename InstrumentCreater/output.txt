@@ -1,0 +1,902 @@
+The Partition is 1
+The Port is 0
+Socket creation succeeded
+Starting the InstrumentGateway...
+FILE INSTRUMENT 4
+
+FILE INSTRUMENT 74196
+GARAN.E
+888
+
+FILE INSTRUMENT 1778132
+F_GARAN1024                    
+888
+
+FILE INSTRUMENT 79176
+VESTL.E
+888
+
+FILE INSTRUMENT 472392
+F_VESTL1024                    
+888
+
+Opening file for reading market instrument info: /opt/itchTest/itchFiles/itch.3.20241010.dat
+Market Processor Thread created3
+JANTS.E                         JANTSA JANT SANAYI              TREJANT00011TRY
+JANTS.E                         JANTSA JANT SANAYI              TREJANT00011TRY
+5
+KAPLM.E                         KAPLAMIN                        TRAKAPLM91D7TRY
+KAPLM.E                         KAPLAMIN                        TRAKAPLM91D7TRY
+5
+KAREL.E                         KAREL ELEKTRONIK                TREKREL00019TRY
+KAREL.E                         KAREL ELEKTRONIK                TREKREL00019TRY
+5
+KARSN.E                         KARSAN OTOMOTIV                 TRAKARSN91H7TRY
+KARSN.E                         KARSAN OTOMOTIV                 TRAKARSN91H7TRY
+5
+KARTN.E                         KARTONSAN                       TRAKARTN91D4TRY
+KARTN.E                         KARTONSAN                       TRAKARTN91D4TRY
+5
+KATMR.E                         KATMERCILER EKIPMAN             TREKTMR00015TRY
+KATMR.E                         KATMERCILER EKIPMAN             TREKTMR00015TRY
+5
+KCAER.E                         KOCAER CELIK                    TREKCAE00030TRY
+KCAER.E                         KOCAER CELIK                    TREKCAE00030TRY
+5
+KCHOL.E                         KOC HOLDING                     TRAKCHOL91Q8TRY
+KCHOL.E                         KOC HOLDING                     TRAKCHOL91Q8TRY
+5
+KENT.E                          KENT GIDA                       TRAKENTW91A2TRY
+KENT.E                          KENT GIDA                       TRAKENTW91A2TRY
+4
+KERVN.E                         KERVANSARAY YAT. HOLDING        TRACEYLN91B0TRY
+KERVN.E                         KERVANSARAY YAT. HOLDING        TRACEYLN91B0TRY
+5
+KERVT.E                         KEREVITAS GIDA                  TRAKERVT91A5TRY
+KERVT.E                         KEREVITAS GIDA                  TRAKERVT91A5TRY
+5
+KGYO.E                          KORAY GMYO                      TRAYKGYO91Q7TRY
+KGYO.E                          KORAY GMYO                      TRAYKGYO91Q7TRY
+4
+KLGYO.E                         KILER GMYO                      TREKGYO00014TRY
+KLGYO.E                         KILER GMYO                      TREKGYO00014TRY
+5
+KLKIM.E                         KALEKIM KIMYEVI MADDELER        TREKLKM00025TRY
+KLKIM.E                         KALEKIM KIMYEVI MADDELER        TREKLKM00025TRY
+5
+KLMSN.E                         KLIMASAN KLIMA                  TRAKLMSN91H5TRY
+KLMSN.E                         KLIMASAN KLIMA                  TRAKLMSN91H5TRY
+5
+KLNMA.E                         T. KALKINMA BANK.               TRATKBNK91N6TRY
+KLNMA.E                         T. KALKINMA BANK.               TRATKBNK91N6TRY
+5
+KLRHO.E                         KILER HOLDING                   TREKLRH00038TRY
+KLRHO.E                         KILER HOLDING                   TREKLRH00038TRY
+5
+KLSYN.E                         KOLEKSIYON MOBILYA              TREKLSN00026TRY
+KLSYN.E                         KOLEKSIYON MOBILYA              TREKLSN00026TRY
+5
+KNFRT.E                         KONFRUT GIDA                    TRAKNFRT91A9TRY
+KNFRT.E                         KONFRUT GIDA                    TRAKNFRT91A9TRY
+5
+KMPUR.E                         KIMTEKS POLIURETAN              TREKMPU00017TRY
+KMPUR.E                         KIMTEKS POLIURETAN              TREKMPU00017TRY
+5
+KONTR.E                         KONTROLMATIK TEKNOLOJI          TREKNTR00013TRY
+KONTR.E                         KONTROLMATIK TEKNOLOJI          TREKNTR00013TRY
+5
+KONYA.E                         KONYA CIMENTO                   TRAKONYA91F6TRY
+KONYA.E                         KONYA CIMENTO                   TRAKONYA91F6TRY
+5
+KONKA.E                         KONYA KAGIT                     TREKNKA00026TRY
+KONKA.E                         KONYA KAGIT                     TREKNKA00026TRY
+5
+KORDS.E                         KORDSA TEKNIK TEKSTIL           TRAKORDS91B2TRY
+KORDS.E                         KORDSA TEKNIK TEKSTIL           TRAKORDS91B2TRY
+5
+KOZAA.E                         KOZA MADENCILIK                 TREKOZA00014TRY
+KOZAA.E                         KOZA MADENCILIK                 TREKOZA00014TRY
+5
+KOZAL.E                         KOZA ALTIN                      TREKOAL00014TRY
+KOZAL.E                         KOZA ALTIN                      TREKOAL00014TRY
+5
+KRDMA.E                         KARDEMIR (A)                    TRAKRDMA91G3TRY
+KRDMA.E                         KARDEMIR (A)                    TRAKRDMA91G3TRY
+5
+KRDMB.E                         KARDEMIR (B)                    TRAKRDMB91G1TRY
+KRDMB.E                         KARDEMIR (B)                    TRAKRDMB91G1TRY
+5
+KRDMD.E                         KARDEMIR (D)                    TRAKRDMR91G7TRY
+KRDMD.E                         KARDEMIR (D)                    TRAKRDMR91G7TRY
+5
+KRGYO.E                         KORFEZ GMYO                     TREKRFZ00016TRY
+KRGYO.E                         KORFEZ GMYO                     TREKRFZ00016TRY
+5
+KRONT.E                         KRON TELEKOMUNIKASYON           TREKRON00014TRY
+KRONT.E                         KRON TELEKOMUNIKASYON           TREKRON00014TRY
+5
+KRPLS.E                         KOROPLAST TEMIZLIK AMBALAJ      TREKRPL00015TRY
+KRPLS.E                         KOROPLAST TEMIZLIK AMBALAJ      TREKRPL00015TRY
+5
+KRSTL.E                         KRISTAL KOLA                    TRAKRSTL91A6TRY
+KRSTL.E                         KRISTAL KOLA                    TRAKRSTL91A6TRY
+5
+KRTEK.E                         KARSU TEKSTIL                   TRAKRTEK91B6TRY
+KRTEK.E                         KARSU TEKSTIL                   TRAKRTEK91B6TRY
+5
+KRVGD.E                         KERVAN GIDA                     TREKRVG00013TRY
+KRVGD.E                         KERVAN GIDA                     TREKRVG00013TRY
+5
+KSTUR.E                         KUSTUR KUSADASI TURIZM          TREKUST00016TRY
+KSTUR.E                         KUSTUR KUSADASI TURIZM          TREKUST00016TRY
+5
+KUVVA.E                         KUVVA GIDA                      TRASERVE91T0TRY
+KUVVA.E                         KUVVA GIDA                      TRASERVE91T0TRY
+5
+KUTPO.E                         KUTAHYA PORSELEN                TRAKUTPO91F9TRY
+KUTPO.E                         KUTAHYA PORSELEN                TRAKUTPO91F9TRY
+5
+KUYAS.E                         KUYAS YATIRIM                   TREKYAS00018TRY
+KUYAS.E                         KUYAS YATIRIM                   TREKYAS00018TRY
+5
+KZBGY.E                         KIZILBUK GYO                    TREKZBG00026TRY
+KZBGY.E                         KIZILBUK GYO                    TREKZBG00026TRY
+5
+LIDFA.E                         LIDER FAKTORING                 TRELDFK00016TRY
+LIDFA.E                         LIDER FAKTORING                 TRELDFK00016TRY
+5
+LINK.E                          LINK BILGISAYAR                 TRALINKW91U8TRY
+LINK.E                          LINK BILGISAYAR                 TRALINKW91U8TRY
+4
+LKMNH.E                         LOKMAN HEKIM SAGLIK             TRELKMH00013TRY
+LKMNH.E                         LOKMAN HEKIM SAGLIK             TRELKMH00013TRY
+5
+LOGO.E                          LOGO YAZILIM                    TRALOGOW91U2TRY
+LOGO.E                          LOGO YAZILIM                    TRALOGOW91U2TRY
+4
+LUKSK.E                         LUKS KADIFE                     TRALUKSK91B7TRY
+LUKSK.E                         LUKS KADIFE                     TRALUKSK91B7TRY
+5
+MAKIM.E                         MAKIM MAKINE                    TREMAKM00024TRY
+MAKIM.E                         MAKIM MAKINE                    TREMAKM00024TRY
+5
+MAALT.E                         MARMARIS ALTINYUNUS             TRAMAALT91K5TRY
+MAALT.E                         MARMARIS ALTINYUNUS             TRAMAALT91K5TRY
+5
+MAGEN.E                         MARGUN ENERJI                   TREMARN00027TRY
+MAGEN.E                         MARGUN ENERJI                   TREMARN00027TRY
+5
+MAKTK.E                         MAKINA TAKIM                    TRAMAKTK91H2TRY
+MAKTK.E                         MAKINA TAKIM                    TRAMAKTK91H2TRY
+5
+MARKA.E                         MARKA YATIRIM HOLDING           TREIFTY00019TRY
+MARKA.E                         MARKA YATIRIM HOLDING           TREIFTY00019TRY
+5
+MARTI.E                         MARTI OTEL                      TRAMMART91K7TRY
+MARTI.E                         MARTI OTEL                      TRAMMART91K7TRY
+5
+MAVI.E                          MAVI GIYIM                      TREMAVI00037TRY
+MAVI.E                          MAVI GIYIM                      TREMAVI00037TRY
+4
+MEDTR.E                         MEDITERA TIBBI MALZEME          TREMDTR00028TRY
+MEDTR.E                         MEDITERA TIBBI MALZEME          TREMDTR00028TRY
+5
+MEGAP.E                         MEGA POLIETILEN                 TREMEGA00011TRY
+MEGAP.E                         MEGA POLIETILEN                 TREMEGA00011TRY
+5
+MEPET.E                         METRO PETROL VE TESISLERI       TREMEPT00012TRY
+MEPET.E                         METRO PETROL VE TESISLERI       TREMEPT00012TRY
+5
+MERIT.E                         MERIT TURIZM                    TREMRTT00016TRY
+MERIT.E                         MERIT TURIZM                    TREMRTT00016TRY
+5
+MERKO.E                         MERKO GIDA                      TRAMERKO91A5TRY
+MERKO.E                         MERKO GIDA                      TRAMERKO91A5TRY
+5
+METRO.E                         METRO HOLDING                   TRAVANET91A5TRY
+METRO.E                         METRO HOLDING                   TRAVANET91A5TRY
+5
+METUR.E                         METEMTUR YATIRIM                TREMETU00012TRY
+METUR.E                         METEMTUR YATIRIM                TREMETU00012TRY
+5
+MGROS.E                         MIGROS TICARET                  TREMGTI00012TRY
+MGROS.E                         MIGROS TICARET                  TREMGTI00012TRY
+5
+MIPAZ.E                         MILPA                           TRAMIPAZ91J8TRY
+MIPAZ.E                         MILPA                           TRAMIPAZ91J8TRY
+5
+MMCAS.E                         MMC SAN. VE TIC. YAT.           TREGNTR00011TRY
+MMCAS.E                         MMC SAN. VE TIC. YAT.           TREGNTR00011TRY
+5
+MNDRS.E                         MENDERES TEKSTIL                TRAMNDRS91B0TRY
+MNDRS.E                         MENDERES TEKSTIL                TRAMNDRS91B0TRY
+5
+MPARK.E                         MLP SAGLIK                      TREMLPC00021TRY
+MPARK.E                         MLP SAGLIK                      TREMLPC00021TRY
+5
+MPATA.F1                        MUKAFAT PORTFOY IKINCI GMYF     TRYMKFT00091TRY
+MPATA.F1                        MUKAFAT PORTFOY IKINCI GMYF     TRYMKFT00091TRY
+5
+MRGYO.E                         MARTI GMYO                      TREMRGY00013TRY
+MRGYO.E                         MARTI GMYO                      TREMRGY00013TRY
+5
+MOBTL.E                         MOBILTEL ILETISIM               TREMBTL00025TRY
+MOBTL.E                         MOBILTEL ILETISIM               TREMBTL00025TRY
+5
+MOGAN.E                         MOGAN ENERJI                    TREMOGN00021TRY
+MOGAN.E                         MOGAN ENERJI                    TREMOGN00021TRY
+5
+MRSHL.E                         MARSHALL                        TRAMRSHL91E9TRY
+MRSHL.E                         MARSHALL                        TRAMRSHL91E9TRY
+5
+MSGYO.E                         MISTRAL GMYO                    TREMIST00017TRY
+MSGYO.E                         MISTRAL GMYO                    TREMIST00017TRY
+5
+MTRYO.E                         METRO YAT. ORT.                 TRAECBYO91Q7TRY
+MTRYO.E                         METRO YAT. ORT.                 TRAECBYO91Q7TRY
+5
+MZHLD.E                         MAZHAR ZORLU HOLDING            TRAMZHLD94Q2TRY
+MZHLD.E                         MAZHAR ZORLU HOLDING            TRAMZHLD94Q2TRY
+5
+NETAS.E                         NETAS TELEKOM.                  TRANETAS91H6TRY
+NETAS.E                         NETAS TELEKOM.                  TRANETAS91H6TRY
+5
+NIBAS.E                         NIGBAS NIGDE BETON              TRENNBS00013TRY
+NIBAS.E                         NIGBAS NIGDE BETON              TRENNBS00013TRY
+5
+NTGAZ.E                         NATURELGAZ                      TRENTGZ00014TRY
+NTGAZ.E                         NATURELGAZ                      TRENTGZ00014TRY
+5
+NTHOL.E                         NET HOLDING                     TRANTHOL91Q6TRY
+NTHOL.E                         NET HOLDING                     TRANTHOL91Q6TRY
+5
+NUGYO.E                         NUROL GMYO                      TRANUGYO91Q9TRY
+NUGYO.E                         NUROL GMYO                      TRANUGYO91Q9TRY
+5
+NUHCM.E                         NUH CIMENTO                     TRANUHCM91F0TRY
+NUHCM.E                         NUH CIMENTO                     TRANUHCM91F0TRY
+5
+ODAS.E                          ODAS ELEKTRIK                   TREODAS00014TRY
+ODAS.E                          ODAS ELEKTRIK                   TREODAS00014TRY
+4
+OLMK.E                          MONDI OLMUKSAN KAGIT VE AMBALAJ TRAOLMKS91D2TRY
+OLMK.E                          MONDI OLMUKSAN KAGIT VE AMBALAJ TRAOLMKS91D2TRY
+4
+ONCSM.E                         ONCOSEM ONKOLOJIK SISTEMLER     TREONCO00026TRY
+ONCSM.E                         ONCOSEM ONKOLOJIK SISTEMLER     TREONCO00026TRY
+5
+ORGE.E                          ORGE ENERJI ELEKTRIK            TREORGE00011TRY
+ORGE.E                          ORGE ENERJI ELEKTRIK            TREORGE00011TRY
+4
+ORMA.E                          ORMA ORMAN MAHSULLERI           TREORMA00017TRY
+ORMA.E                          ORMA ORMAN MAHSULLERI           TREORMA00017TRY
+4
+OSMEN.E                         OSMANLI MENKUL                  TREOSMK00022TRY
+OSMEN.E                         OSMANLI MENKUL                  TREOSMK00022TRY
+5
+OSTIM.E                         OSTIM ENDUSTRIYEL YAT           TREOSTM00015TRY
+OSTIM.E                         OSTIM ENDUSTRIYEL YAT           TREOSTM00015TRY
+5
+OTKAR.E                         OTOKAR                          TRAOTKAR91H3TRY
+OTKAR.E                         OTOKAR                          TRAOTKAR91H3TRY
+5
+OTTO.E                          OTTO HOLDING                    TRETTUR00019TRY
+OTTO.E                          OTTO HOLDING                    TRETTUR00019TRY
+4
+OYAKC.E                         OYAK CIMENTO                    TRAMRDIN91F2TRY
+OYAKC.E                         OYAK CIMENTO                    TRAMRDIN91F2TRY
+5
+OYAYO.E                         OYAK YAT. ORT.                  TREOYAY00018TRY
+OYAYO.E                         OYAK YAT. ORT.                  TREOYAY00018TRY
+5
+OYLUM.E                         OYLUM SINAI YATIRIMLAR          TREOYLS00017TRY
+OYLUM.E                         OYLUM SINAI YATIRIMLAR          TREOYLS00017TRY
+5
+OYYAT.E                         OYAK YATIRIM MENKUL             TREOYMD00017TRY
+OYYAT.E                         OYAK YATIRIM MENKUL             TREOYMD00017TRY
+5
+OZGYO.E                         OZDERICI GMYO                   TRAOZFIN91P5TRY
+OZGYO.E                         OZDERICI GMYO                   TRAOZFIN91P5TRY
+5
+OZKGY.E                         OZAK GMYO                       TREOZAK00014TRY
+OZKGY.E                         OZAK GMYO                       TREOZAK00014TRY
+5
+OZRDN.E                         OZERDEN PLASTIK                 TREOZER00029TRY
+OZRDN.E                         OZERDEN PLASTIK                 TREOZER00029TRY
+5
+PAGYO.E                         PANORA GMYO                     TREPGYO00013TRY
+PAGYO.E                         PANORA GMYO                     TREPGYO00013TRY
+5
+PAMEL.E                         PAMEL ELEKTRIK                  TREBOMO00012TRY
+PAMEL.E                         PAMEL ELEKTRIK                  TREBOMO00012TRY
+5
+PARSN.E                         PARSAN                          TRAPARSN91H6TRY
+PARSN.E                         PARSAN                          TRAPARSN91H6TRY
+5
+PEGYO.E                         PERA GMYO                       TRAGLOBL91Q0TRY
+PEGYO.E                         PERA GMYO                       TRAGLOBL91Q0TRY
+5
+PEKGY.E                         PEKER GMYO                      TREPEGY00022TRY
+PEKGY.E                         PEKER GMYO                      TREPEGY00022TRY
+5
+PENGD.E                         PENGUEN GIDA                    TRAPENGD91A8TRY
+PENGD.E                         PENGUEN GIDA                    TRAPENGD91A8TRY
+5
+PENTA.E                         PENTA TEKNOLOJI URUNLERI DAGITIMTREPNTA00042TRY
+PENTA.E                         PENTA TEKNOLOJI URUNLERI DAGITIMTREPNTA00042TRY
+5
+PETKM.E                         PETKIM                          TRAPETKM91E0TRY
+PETKM.E                         PETKIM                          TRAPETKM91E0TRY
+5
+PETUN.E                         PINAR ET VE UN                  TRAPETUN91A5TRY
+PETUN.E                         PINAR ET VE UN                  TRAPETUN91A5TRY
+5
+PGSUS.E                         PEGASUS                         TREPEGS00016TRY
+PGSUS.E                         PEGASUS                         TREPEGS00016TRY
+5
+PINSU.E                         PINAR SU                        TRAPINSU91A8TRY
+PINSU.E                         PINAR SU                        TRAPINSU91A8TRY
+5
+PKART.E                         PLASTIKKART                     TREPKRT00018TRY
+PKART.E                         PLASTIKKART                     TREPKRT00018TRY
+5
+PKENT.E                         PETROKENT TURIZM                TRAPKENT91K5TRY
+PKENT.E                         PETROKENT TURIZM                TRAPKENT91K5TRY
+5
+PMVR3.G                         TOKI PARK MAVERA3 PROJESI       TRNTOKI00011TRY
+PMVR3.G                         TOKI PARK MAVERA3 PROJESI       TRNTOKI00011TRY
+5
+PNSUT.E                         PINAR SUT                       TRAPNSUT91A5TRY
+PNSUT.E                         PINAR SUT                       TRAPNSUT91A5TRY
+5
+PNLSN.E                         PANELSAN CATI CEPHE             TREPNLS00017TRY
+PNLSN.E                         PANELSAN CATI CEPHE             TREPNLS00017TRY
+5
+POLHO.E                         POLISAN HOLDING                 TREPOHO00012TRY
+POLHO.E                         POLISAN HOLDING                 TREPOHO00012TRY
+5
+POLTK.E                         POLITEKNIK METAL                TREPOLT00013TRY
+POLTK.E                         POLITEKNIK METAL                TREPOLT00013TRY
+5
+PRKAB.E                         TURK PRYSMIAN KABLO             TRASMENS91H3TRY
+PRKAB.E                         TURK PRYSMIAN KABLO             TRASMENS91H3TRY
+5
+PRKME.E                         PARK ELEK.MADENCILIK            TRAPRKTE91B5TRY
+PRKME.E                         PARK ELEK.MADENCILIK            TRAPRKTE91B5TRY
+5
+PRZMA.E                         PRIZMA PRESS MATBAACILIK        TREPRZM00011TRY
+PRZMA.E                         PRIZMA PRESS MATBAACILIK        TREPRZM00011TRY
+5
+PSDTC.E                         PERGAMON DIS TICARET            TREPERG00018TRY
+PSDTC.E                         PERGAMON DIS TICARET            TREPERG00018TRY
+5
+PSGYO.E                         PASIFIK GMYO                    TREPSFK00023TRY
+PSGYO.E                         PASIFIK GMYO                    TREPSFK00023TRY
+5
+QNBFB.E                         QNB FINANSBANK                  TRAFINBN91N3TRY
+QNBFB.E                         QNB FINANSBANK                  TRAFINBN91N3TRY
+5
+QNBFL.E                         QNB FINANS FINANSAL KIRALAMA    TRAFFKRL91P0TRY
+QNBFL.E                         QNB FINANS FINANSAL KIRALAMA    TRAFFKRL91P0TRY
+5
+QPERP.F1                        QINVEST PY RE-PIE GMYF          TRYQPYS00045TRY
+QPERP.F1                        QINVEST PY RE-PIE GMYF          TRYQPYS00045TRY
+5
+QTEMZ.F                         QNB FINANSPORTFOY TEMIZ ENERJI HTRMCU1WWWWW3TRY
+QTEMZ.F                         QNB FINANSPORTFOY TEMIZ ENERJI HTRMCU1WWWWW3TRY
+5
+RALYH.E                         RAL YATIRIM HOLDING             TRABISAS91B7TRY
+RALYH.E                         RAL YATIRIM HOLDING             TRABISAS91B7TRY
+5
+RAYSG.E                         RAY SIGORTA                     TRARAYSG91O8TRY
+RAYSG.E                         RAY SIGORTA                     TRARAYSG91O8TRY
+5
+RHEAG.E                         RHEA GIRISIM                    TRAVKFRS91Q0TRY
+RHEAG.E                         RHEA GIRISIM                    TRAVKFRS91Q0TRY
+5
+RODRG.E                         RODRIGO TEKSTIL                 TRERDRT00019TRY
+RODRG.E                         RODRIGO TEKSTIL                 TRERDRT00019TRY
+5
+RPAVS.F1                        RE-PIE AVRASYA STRATEJIK GMYF   TRYRGGS00023TRY
+RPAVS.F1                        RE-PIE AVRASYA STRATEJIK GMYF   TRYRGGS00023TRY
+5
+RPFGY.F1                        RE-PIE PY FIRSAT GMYF           TRYFIBP00062TRY
+RPFGY.F1                        RE-PIE PY FIRSAT GMYF           TRYFIBP00062TRY
+5
+ROYAL.E                         ROYAL HALI                      TRERHLI00016TRY
+ROYAL.E                         ROYAL HALI                      TRERHLI00016TRY
+5
+RTALB.E                         RTA LABORATUVARLARI             TRERTAL00018TRY
+RTALB.E                         RTA LABORATUVARLARI             TRERTAL00018TRY
+5
+RYGYO.E                         REYSAS GMYO                     TRERGYO00019TRY
+RYGYO.E                         REYSAS GMYO                     TRERGYO00019TRY
+5
+RUBNS.E                         RUBENIS TEKSTIL                 TRERBNS00014TRY
+RUBNS.E                         RUBENIS TEKSTIL                 TRERBNS00014TRY
+5
+RYSAS.E                         REYSAS LOJISTIK                 TREREYS00015TRY
+RYSAS.E                         REYSAS LOJISTIK                 TREREYS00015TRY
+5
+RYSAS.R                         REYSAS LOJISTIK  - RHKP         TRRREYS00033TRY
+RYSAS.R                         REYSAS LOJISTIK  - RHKP         TRRREYS00033TRY
+5
+SAHOL.E                         SABANCI HOLDING                 TRASAHOL91Q5TRY
+SAHOL.E                         SABANCI HOLDING                 TRASAHOL91Q5TRY
+5
+SAMAT.E                         SARAY MATBAACILIK               TRESRAY00013TRY
+SAMAT.E                         SARAY MATBAACILIK               TRESRAY00013TRY
+5
+SANEL.E                         SANEL MUHENDISLIK               TRESNEL00011TRY
+SANEL.E                         SANEL MUHENDISLIK               TRESNEL00011TRY
+5
+SANFM.E                         SANIFOAM ENDUSTRI               TRESNFM00016TRY
+SANFM.E                         SANIFOAM ENDUSTRI               TRESNFM00016TRY
+5
+SANKO.E                         SANKO PAZARLAMA                 TRASANKO91I2TRY
+SANKO.E                         SANKO PAZARLAMA                 TRASANKO91I2TRY
+5
+SARKY.E                         SARKUYSAN                       TRASARKY91G6TRY
+SARKY.E                         SARKUYSAN                       TRASARKY91G6TRY
+5
+SASA.E                          SASA POLYESTER                  TRASASAW91E4TRY
+SASA.E                          SASA POLYESTER                  TRASASAW91E4TRY
+4
+SAYAS.E                         SAY YENILENEBILIR ENERJI        TRESAYR00013TRY
+SAYAS.E                         SAY YENILENEBILIR ENERJI        TRESAYR00013TRY
+5
+SDTTR.E                         SDT UZAY VE SAVUNMA             TRESDTT00013TRY
+SDTTR.E                         SDT UZAY VE SAVUNMA             TRESDTT00013TRY
+5
+SEKFK.E                         SEKER FIN. KIR.                 TRESKFK00016TRY
+SEKFK.E                         SEKER FIN. KIR.                 TRESKFK00016TRY
+5
+SEKUR.E                         SEKURO PLASTIK                  TRESKPA00016TRY
+SEKUR.E                         SEKURO PLASTIK                  TRESKPA00016TRY
+5
+SEKUR.R                         SEKURO PLASTIK  - RHKP                      TRY
+SEKUR.R                         SEKURO PLASTIK  - RHKP                      TRY
+5
+SELEC.E                         SELCUK ECZA DEPOSU              TRESLEC00014TRY
+SELEC.E                         SELCUK ECZA DEPOSU              TRESLEC00014TRY
+5
+SELGD.E                         SELCUK GIDA                     TRASELGD91A6TRY
+SELGD.E                         SELCUK GIDA                     TRASELGD91A6TRY
+5
+SELVA.E                         SELVA GIDA                      TRESLVA00020TRY
+SELVA.E                         SELVA GIDA                      TRESLVA00020TRY
+5
+SEYKM.E                         SEYITLER KIMYA                  TRESEYT00011TRY
+SEYKM.E                         SEYITLER KIMYA                  TRESEYT00011TRY
+5
+SILVR.E                         SILVERLINE ENDUSTRI             TRESLVR00016TRY
+SILVR.E                         SILVERLINE ENDUSTRI             TRESLVR00016TRY
+5
+SISE.E                          SISE CAM                        TRASISEW91Q3TRY
+SISE.E                          SISE CAM                        TRASISEW91Q3TRY
+4
+SKBNK.E                         SEKERBANK                       TRASKBNK91N8TRY
+SKBNK.E                         SEKERBANK                       TRASKBNK91N8TRY
+5
+SKTAS.E                         SOKTAS                          TRASKTAS91B5TRY
+SKTAS.E                         SOKTAS                          TRASKTAS91B5TRY
+5
+SKYMD.E                         SEKER YATIRIM                   TRESKMD00017TRY
+SKYMD.E                         SEKER YATIRIM                   TRESKMD00017TRY
+5
+KARYE.E                         KARTAL YEN. ENERJI              TREKARY00028TRY
+KARYE.E                         KARTAL YEN. ENERJI              TREKARY00028TRY
+5
+KFEIN.E                         KAFEIN YAZILIM                  TREKFIN00037TRY
+KFEIN.E                         KAFEIN YAZILIM                  TREKFIN00037TRY
+5
+KIMMR.E                         KIM MARKET-ERSAN ALISVERIS      TREERSN00026TRY
+KIMMR.E                         KIM MARKET-ERSAN ALISVERIS      TREERSN00026TRY
+5
+KTSKR.E                         KUTAHYA SEKER FABRIKASI         TREKTSR00046TRY
+KTSKR.E                         KUTAHYA SEKER FABRIKASI         TREKTSR00046TRY
+5
+LIDER.E                         LDR TURIZM                      TRELDRT00020TRY
+LIDER.E                         LDR TURIZM                      TRELDRT00020TRY
+5
+MANAS.E                         MANAS ENERJI YONETIMI           TREMANS00025TRY
+MANAS.E                         MANAS ENERJI YONETIMI           TREMANS00025TRY
+5
+MERCN.E                         MERCAN KIMYA                    TREMRCN00023TRY
+MERCN.E                         MERCAN KIMYA                    TREMRCN00023TRY
+5
+MIATK.E                         MIA TEKNOLOJI                   TREMIAT00015TRY
+MIATK.E                         MIA TEKNOLOJI                   TREMIAT00015TRY
+5
+MTRKS.E                         MATRIKS BILGI DAGITIM           TREMTRK00015TRY
+MTRKS.E                         MATRIKS BILGI DAGITIM           TREMTRK00015TRY
+5
+NATEN.E                         NATUREL ENERJI                  TRENATU00026TRY
+NATEN.E                         NATUREL ENERJI                  TRENATU00026TRY
+5
+OBASE.E                         OBASE BILGISAYAR                TREOBAS00018TRY
+OBASE.E                         OBASE BILGISAYAR                TREOBAS00018TRY
+5
+ORCAY.E                         ORCAY ORTAKOY CAY SANAYI        TREORCY00026TRY
+ORCAY.E                         ORCAY ORTAKOY CAY SANAYI        TREORCY00026TRY
+5
+PAPIL.E                         PAPILON SAVUNMA                 TREPAPL00010TRY
+PAPIL.E                         PAPILON SAVUNMA                 TREPAPL00010TRY
+5
+PCILT.E                         PC ILETISIM MEDYA               TREPCIL00029TRY
+PCILT.E                         PC ILETISIM MEDYA               TREPCIL00029TRY
+5
+PRDGS.E                         PARDUS GIRISIM                  TREPRDS00023TRY
+PRDGS.E                         PARDUS GIRISIM                  TREPRDS00023TRY
+5
+QUAGR.E                         QUA GRANITE HAYAL YAPI          TREQAGR00022TRY
+QUAGR.E                         QUA GRANITE HAYAL YAPI          TREQAGR00022TRY
+5
+RNPOL.E                         RAINBOW POLIKARBONAT            TRERNPL00027TRY
+RNPOL.E                         RAINBOW POLIKARBONAT            TRERNPL00027TRY
+5
+SAFKR.E                         SAFKAR EGE SOGUTMACILIK         TRESFEK00027TRY
+SAFKR.E                         SAFKAR EGE SOGUTMACILIK         TRESFEK00027TRY
+5
+SEGYO.E                         SEKER GMYO                      TRESKGY00015TRY
+SEGYO.E                         SEKER GMYO                      TRESKGY00015TRY
+5
+PMVR3.G                         TOKI PARK MAVERA3 PROJESI       TRNTOKI00011TRY
+PMVR3.G                         TOKI PARK MAVERA3 PROJESI       TRNTOKI00011TRY
+5
+RPAVS.F1                        RE-PIE AVRASYA STRATEJIK GMYF   TRYRGGS00023TRY
+RPAVS.F1                        RE-PIE AVRASYA STRATEJIK GMYF   TRYRGGS00023TRY
+JANTS.E                         JANTSA JANT SANAYI              TREJANT00011TRY
+JANTS.E                         JANTSA JANT SANAYI              TREJANT00011TRY
+KAPLM.E                         KAPLAMIN                        TRAKAPLM91D7TRY
+KAPLM.E                         KAPLAMIN                        TRAKAPLM91D7TRY
+KAREL.E                         KAREL ELEKTRONIK                TREKREL00019TRY
+KAREL.E                         KAREL ELEKTRONIK                TREKREL00019TRY
+KARSN.E                         KARSAN OTOMOTIV                 TRAKARSN91H7TRY
+KARSN.E                         KARSAN OTOMOTIV                 TRAKARSN91H7TRY
+KARTN.E                         KARTONSAN                       TRAKARTN91D4TRY
+KARTN.E                         KARTONSAN                       TRAKARTN91D4TRY
+KARYE.E                         KARTAL YEN. ENERJI              TREKARY00028TRY
+KARYE.E                         KARTAL YEN. ENERJI              TREKARY00028TRY
+KATMR.E                         KATMERCILER EKIPMAN             TREKTMR00015TRY
+KATMR.E                         KATMERCILER EKIPMAN             TREKTMR00015TRY
+KCAER.E                         KOCAER CELIK                    TREKCAE00030TRY
+KCAER.E                         KOCAER CELIK                    TREKCAE00030TRY
+KCHOL.E                         KOC HOLDING                     TRAKCHOL91Q8TRY
+KCHOL.E                         KOC HOLDING                     TRAKCHOL91Q8TRY
+KENT.E                          KENT GIDA                       TRAKENTW91A2TRY
+KENT.E                          KENT GIDA                       TRAKENTW91A2TRY
+KERVN.E                         KERVANSARAY YAT. HOLDING        TRACEYLN91B0TRY
+KERVN.E                         KERVANSARAY YAT. HOLDING        TRACEYLN91B0TRY
+KERVT.E                         KEREVITAS GIDA                  TRAKERVT91A5TRY
+KERVT.E                         KEREVITAS GIDA                  TRAKERVT91A5TRY
+KFEIN.E                         KAFEIN YAZILIM                  TREKFIN00037TRY
+KFEIN.E                         KAFEIN YAZILIM                  TREKFIN00037TRY
+KGYO.E                          KORAY GMYO                      TRAYKGYO91Q7TRY
+KGYO.E                          KORAY GMYO                      TRAYKGYO91Q7TRY
+KIMMR.E                         KIM MARKET-ERSAN ALISVERIS      TREERSN00026TRY
+KIMMR.E                         KIM MARKET-ERSAN ALISVERIS      TREERSN00026TRY
+KLGYO.E                         KILER GMYO                      TREKGYO00014TRY
+KLGYO.E                         KILER GMYO                      TREKGYO00014TRY
+KLKIM.E                         KALEKIM KIMYEVI MADDELER        TREKLKM00025TRY
+KLKIM.E                         KALEKIM KIMYEVI MADDELER        TREKLKM00025TRY
+KLMSN.E                         KLIMASAN KLIMA                  TRAKLMSN91H5TRY
+KLMSN.E                         KLIMASAN KLIMA                  TRAKLMSN91H5TRY
+KLNMA.E                         T. KALKINMA BANK.               TRATKBNK91N6TRY
+KLNMA.E                         T. KALKINMA BANK.               TRATKBNK91N6TRY
+KLRHO.E                         KILER HOLDING                   TREKLRH00038TRY
+KLRHO.E                         KILER HOLDING                   TREKLRH00038TRY
+KLSYN.E                         KOLEKSIYON MOBILYA              TREKLSN00026TRY
+KLSYN.E                         KOLEKSIYON MOBILYA              TREKLSN00026TRY
+KNFRT.E                         KONFRUT GIDA                    TRAKNFRT91A9TRY
+KNFRT.E                         KONFRUT GIDA                    TRAKNFRT91A9TRY
+KMPUR.E                         KIMTEKS POLIURETAN              TREKMPU00017TRY
+KMPUR.E                         KIMTEKS POLIURETAN              TREKMPU00017TRY
+KONTR.E                         KONTROLMATIK TEKNOLOJI          TREKNTR00013TRY
+KONTR.E                         KONTROLMATIK TEKNOLOJI          TREKNTR00013TRY
+KONYA.E                         KONYA CIMENTO                   TRAKONYA91F6TRY
+KONYA.E                         KONYA CIMENTO                   TRAKONYA91F6TRY
+KONKA.E                         KONYA KAGIT                     TREKNKA00026TRY
+KONKA.E                         KONYA KAGIT                     TREKNKA00026TRY
+KORDS.E                         KORDSA TEKNIK TEKSTIL           TRAKORDS91B2TRY
+KORDS.E                         KORDSA TEKNIK TEKSTIL           TRAKORDS91B2TRY
+KOZAA.E                         KOZA MADENCILIK                 TREKOZA00014TRY
+KOZAA.E                         KOZA MADENCILIK                 TREKOZA00014TRY
+KOZAL.E                         KOZA ALTIN                      TREKOAL00014TRY
+KOZAL.E                         KOZA ALTIN                      TREKOAL00014TRY
+KRDMA.E                         KARDEMIR (A)                    TRAKRDMA91G3TRY
+KRDMA.E                         KARDEMIR (A)                    TRAKRDMA91G3TRY
+KRDMB.E                         KARDEMIR (B)                    TRAKRDMB91G1TRY
+KRDMB.E                         KARDEMIR (B)                    TRAKRDMB91G1TRY
+KRDMD.E                         KARDEMIR (D)                    TRAKRDMR91G7TRY
+KRDMD.E                         KARDEMIR (D)                    TRAKRDMR91G7TRY
+KRGYO.E                         KORFEZ GMYO                     TREKRFZ00016TRY
+KRGYO.E                         KORFEZ GMYO                     TREKRFZ00016TRY
+KRONT.E                         KRON TELEKOMUNIKASYON           TREKRON00014TRY
+KRONT.E                         KRON TELEKOMUNIKASYON           TREKRON00014TRY
+KRPLS.E                         KOROPLAST TEMIZLIK AMBALAJ      TREKRPL00015TRY
+KRPLS.E                         KOROPLAST TEMIZLIK AMBALAJ      TREKRPL00015TRY
+KRSTL.E                         KRISTAL KOLA                    TRAKRSTL91A6TRY
+KRSTL.E                         KRISTAL KOLA                    TRAKRSTL91A6TRY
+KRTEK.E                         KARSU TEKSTIL                   TRAKRTEK91B6TRY
+KRTEK.E                         KARSU TEKSTIL                   TRAKRTEK91B6TRY
+KRVGD.E                         KERVAN GIDA                     TREKRVG00013TRY
+KRVGD.E                         KERVAN GIDA                     TREKRVG00013TRY
+KSTUR.E                         KUSTUR KUSADASI TURIZM          TREKUST00016TRY
+KSTUR.E                         KUSTUR KUSADASI TURIZM          TREKUST00016TRY
+KTSKR.E                         KUTAHYA SEKER FABRIKASI         TREKTSR00046TRY
+KTSKR.E                         KUTAHYA SEKER FABRIKASI         TREKTSR00046TRY
+KUVVA.E                         KUVVA GIDA                      TRASERVE91T0TRY
+KUVVA.E                         KUVVA GIDA                      TRASERVE91T0TRY
+KUTPO.E                         KUTAHYA PORSELEN                TRAKUTPO91F9TRY
+KUTPO.E                         KUTAHYA PORSELEN                TRAKUTPO91F9TRY
+KUYAS.E                         KUYAS YATIRIM                   TREKYAS00018TRY
+KUYAS.E                         KUYAS YATIRIM                   TREKYAS00018TRY
+KZBGY.E                         KIZILBUK GYO                    TREKZBG00026TRY
+KZBGY.E                         KIZILBUK GYO                    TREKZBG00026TRY
+LIDER.E                         LDR TURIZM                      TRELDRT00020TRY
+LIDER.E                         LDR TURIZM                      TRELDRT00020TRY
+LIDFA.E                         LIDER FAKTORING                 TRELDFK00016TRY
+LIDFA.E                         LIDER FAKTORING                 TRELDFK00016TRY
+LINK.E                          LINK BILGISAYAR                 TRALINKW91U8TRY
+LINK.E                          LINK BILGISAYAR                 TRALINKW91U8TRY
+LKMNH.E                         LOKMAN HEKIM SAGLIK             TRELKMH00013TRY
+LKMNH.E                         LOKMAN HEKIM SAGLIK             TRELKMH00013TRY
+LOGO.E                          LOGO YAZILIM                    TRALOGOW91U2TRY
+LOGO.E                          LOGO YAZILIM                    TRALOGOW91U2TRY
+LUKSK.E                         LUKS KADIFE                     TRALUKSK91B7TRY
+LUKSK.E                         LUKS KADIFE                     TRALUKSK91B7TRY
+MAKIM.E                         MAKIM MAKINE                    TREMAKM00024TRY
+MAKIM.E                         MAKIM MAKINE                    TREMAKM00024TRY
+MAALT.E                         MARMARIS ALTINYUNUS             TRAMAALT91K5TRY
+MAALT.E                         MARMARIS ALTINYUNUS             TRAMAALT91K5TRY
+MAGEN.E                         MARGUN ENERJI                   TREMARN00027TRY
+MAGEN.E                         MARGUN ENERJI                   TREMARN00027TRY
+MAKTK.E                         MAKINA TAKIM                    TRAMAKTK91H2TRY
+MAKTK.E                         MAKINA TAKIM                    TRAMAKTK91H2TRY
+MANAS.E                         MANAS ENERJI YONETIMI           TREMANS00025TRY
+MANAS.E                         MANAS ENERJI YONETIMI           TREMANS00025TRY
+MARKA.E                         MARKA YATIRIM HOLDING           TREIFTY00019TRY
+MARKA.E                         MARKA YATIRIM HOLDING           TREIFTY00019TRY
+MARTI.E                         MARTI OTEL                      TRAMMART91K7TRY
+MARTI.E                         MARTI OTEL                      TRAMMART91K7TRY
+MAVI.E                          MAVI GIYIM                      TREMAVI00037TRY
+MAVI.E                          MAVI GIYIM                      TREMAVI00037TRY
+MEDTR.E                         MEDITERA TIBBI MALZEME          TREMDTR00028TRY
+MEDTR.E                         MEDITERA TIBBI MALZEME          TREMDTR00028TRY
+MEGAP.E                         MEGA POLIETILEN                 TREMEGA00011TRY
+MEGAP.E                         MEGA POLIETILEN                 TREMEGA00011TRY
+MEPET.E                         METRO PETROL VE TESISLERI       TREMEPT00012TRY
+MEPET.E                         METRO PETROL VE TESISLERI       TREMEPT00012TRY
+MERCN.E                         MERCAN KIMYA                    TREMRCN00023TRY
+MERCN.E                         MERCAN KIMYA                    TREMRCN00023TRY
+MERIT.E                         MERIT TURIZM                    TREMRTT00016TRY
+MERIT.E                         MERIT TURIZM                    TREMRTT00016TRY
+MERKO.E                         MERKO GIDA                      TRAMERKO91A5TRY
+MERKO.E                         MERKO GIDA                      TRAMERKO91A5TRY
+METRO.E                         METRO HOLDING                   TRAVANET91A5TRY
+METRO.E                         METRO HOLDING                   TRAVANET91A5TRY
+METUR.E                         METEMTUR YATIRIM                TREMETU00012TRY
+METUR.E                         METEMTUR YATIRIM                TREMETU00012TRY
+MGROS.E                         MIGROS TICARET                  TREMGTI00012TRY
+MGROS.E                         MIGROS TICARET                  TREMGTI00012TRY
+MIATK.E                         MIA TEKNOLOJI                   TREMIAT00015TRY
+MIATK.E                         MIA TEKNOLOJI                   TREMIAT00015TRY
+MIPAZ.E                         MILPA                           TRAMIPAZ91J8TRY
+MIPAZ.E                         MILPA                           TRAMIPAZ91J8TRY
+MMCAS.E                         MMC SAN. VE TIC. YAT.           TREGNTR00011TRY
+MMCAS.E                         MMC SAN. VE TIC. YAT.           TREGNTR00011TRY
+MNDRS.E                         MENDERES TEKSTIL                TRAMNDRS91B0TRY
+MNDRS.E                         MENDERES TEKSTIL                TRAMNDRS91B0TRY
+MPARK.E                         MLP SAGLIK                      TREMLPC00021TRY
+MPARK.E                         MLP SAGLIK                      TREMLPC00021TRY
+MRGYO.E                         MARTI GMYO                      TREMRGY00013TRY
+MRGYO.E                         MARTI GMYO                      TREMRGY00013TRY
+MOBTL.E                         MOBILTEL ILETISIM               TREMBTL00025TRY
+MOBTL.E                         MOBILTEL ILETISIM               TREMBTL00025TRY
+MRSHL.E                         MARSHALL                        TRAMRSHL91E9TRY
+MRSHL.E                         MARSHALL                        TRAMRSHL91E9TRY
+MSGYO.E                         MISTRAL GMYO                    TREMIST00017TRY
+MSGYO.E                         MISTRAL GMYO                    TREMIST00017TRY
+MTRKS.E                         MATRIKS BILGI DAGITIM           TREMTRK00015TRY
+MTRKS.E                         MATRIKS BILGI DAGITIM           TREMTRK00015TRY
+MTRYO.E                         METRO YAT. ORT.                 TRAECBYO91Q7TRY
+MTRYO.E                         METRO YAT. ORT.                 TRAECBYO91Q7TRY
+MZHLD.E                         MAZHAR ZORLU HOLDING            TRAMZHLD94Q2TRY
+MZHLD.E                         MAZHAR ZORLU HOLDING            TRAMZHLD94Q2TRY
+NETAS.E                         NETAS TELEKOM.                  TRANETAS91H6TRY
+NETAS.E                         NETAS TELEKOM.                  TRANETAS91H6TRY
+NATEN.E                         NATUREL ENERJI                  TRENATU00026TRY
+NATEN.E                         NATUREL ENERJI                  TRENATU00026TRY
+NIBAS.E                         NIGBAS NIGDE BETON              TRENNBS00013TRY
+NIBAS.E                         NIGBAS NIGDE BETON              TRENNBS00013TRY
+NTGAZ.E                         NATURELGAZ                      TRENTGZ00014TRY
+NTGAZ.E                         NATURELGAZ                      TRENTGZ00014TRY
+NTHOL.E                         NET HOLDING                     TRANTHOL91Q6TRY
+NTHOL.E                         NET HOLDING                     TRANTHOL91Q6TRY
+NUGYO.E                         NUROL GMYO                      TRANUGYO91Q9TRY
+NUGYO.E                         NUROL GMYO                      TRANUGYO91Q9TRY
+NUHCM.E                         NUH CIMENTO                     TRANUHCM91F0TRY
+NUHCM.E                         NUH CIMENTO                     TRANUHCM91F0TRY
+OBASE.E                         OBASE BILGISAYAR                TREOBAS00018TRY
+OBASE.E                         OBASE BILGISAYAR                TREOBAS00018TRY
+5
+ODAS.E                          ODAS ELEKTRIK                   TREODAS00014TRY
+ODAS.E                          ODAS ELEKTRIK                   TREODAS00014TRY
+4
+ONCSM.E                         ONCOSEM ONKOLOJIK SISTEMLER     TREONCO00026TRY
+ONCSM.E                         ONCOSEM ONKOLOJIK SISTEMLER     TREONCO00026TRY
+5
+ORCAY.E                         ORCAY ORTAKOY CAY SANAYI        TREORCY00026TRY
+ORCAY.E                         ORCAY ORTAKOY CAY SANAYI        TREORCY00026TRY
+5
+ORGE.E                          ORGE ENERJI ELEKTRIK            TREORGE00011TRY
+ORGE.E                          ORGE ENERJI ELEKTRIK            TREORGE00011TRY
+4
+ORMA.E                          ORMA ORMAN MAHSULLERI           TREORMA00017TRY
+ORMA.E                          ORMA ORMAN MAHSULLERI           TREORMA00017TRY
+4
+OSMEN.E                         OSMANLI MENKUL                  TREOSMK00022TRY
+OSMEN.E                         OSMANLI MENKUL                  TREOSMK00022TRY
+5
+OSTIM.E                         OSTIM ENDUSTRIYEL YAT           TREOSTM00015TRY
+OSTIM.E                         OSTIM ENDUSTRIYEL YAT           TREOSTM00015TRY
+5
+OTKAR.E                         OTOKAR                          TRAOTKAR91H3TRY
+OTKAR.E                         OTOKAR                          TRAOTKAR91H3TRY
+5
+OTTO.E                          OTTO HOLDING                    TRETTUR00019TRY
+OTTO.E                          OTTO HOLDING                    TRETTUR00019TRY
+4
+OYAKC.E                         OYAK CIMENTO                    TRAMRDIN91F2TRY
+OYAKC.E                         OYAK CIMENTO                    TRAMRDIN91F2TRY
+5
+OYAYO.E                         OYAK YAT. ORT.                  TREOYAY00018TRY
+OYAYO.E                         OYAK YAT. ORT.                  TREOYAY00018TRY
+5
+OYLUM.E                         OYLUM SINAI YATIRIMLAR          TREOYLS00017TRY
+OYLUM.E                         OYLUM SINAI YATIRIMLAR          TREOYLS00017TRY
+5
+OYYAT.E                         OYAK YATIRIM MENKUL             TREOYMD00017TRY
+OYYAT.E                         OYAK YATIRIM MENKUL             TREOYMD00017TRY
+5
+OZGYO.E                         OZDERICI GMYO                   TRAOZFIN91P5TRY
+OZGYO.E                         OZDERICI GMYO                   TRAOZFIN91P5TRY
+5
+OZKGY.E                         OZAK GMYO                       TREOZAK00014TRY
+OZKGY.E                         OZAK GMYO                       TREOZAK00014TRY
+5
+OZRDN.E                         OZERDEN PLASTIK                 TREOZER00029TRY
+OZRDN.E                         OZERDEN PLASTIK                 TREOZER00029TRY
+5
+PAGYO.E                         PANORA GMYO                     TREPGYO00013TRY
+PAGYO.E                         PANORA GMYO                     TREPGYO00013TRY
+PAMEL.E                         PAMEL ELEKTRIK                  TREBOMO00012TRY
+PAMEL.E                         PAMEL ELEKTRIK                  TREBOMO00012TRY
+PAPIL.E                         PAPILON SAVUNMA                 TREPAPL00010TRY
+PAPIL.E                         PAPILON SAVUNMA                 TREPAPL00010TRY
+PARSN.E                         PARSAN                          TRAPARSN91H6TRY
+PARSN.E                         PARSAN                          TRAPARSN91H6TRY
+PCILT.E                         PC ILETISIM MEDYA               TREPCIL00029TRY
+PCILT.E                         PC ILETISIM MEDYA               TREPCIL00029TRY
+PEGYO.E                         PERA GMYO                       TRAGLOBL91Q0TRY
+PEGYO.E                         PERA GMYO                       TRAGLOBL91Q0TRY
+PEKGY.E                         PEKER GMYO                      TREPEGY00022TRY
+PEKGY.E                         PEKER GMYO                      TREPEGY00022TRY
+PENGD.E                         PENGUEN GIDA                    TRAPENGD91A8TRY
+PENGD.E                         PENGUEN GIDA                    TRAPENGD91A8TRY
+PENTA.E                         PENTA TEKNOLOJI URUNLERI DAGITIMTREPNTA00042TRY
+PENTA.E                         PENTA TEKNOLOJI URUNLERI DAGITIMTREPNTA00042TRY
+PETKM.E                         PETKIM                          TRAPETKM91E0TRY
+PETKM.E                         PETKIM                          TRAPETKM91E0TRY
+PETUN.E                         PINAR ET VE UN                  TRAPETUN91A5TRY
+PETUN.E                         PINAR ET VE UN                  TRAPETUN91A5TRY
+PGSUS.E                         PEGASUS                         TREPEGS00016TRY
+PGSUS.E                         PEGASUS                         TREPEGS00016TRY
+PINSU.E                         PINAR SU                        TRAPINSU91A8TRY
+PINSU.E                         PINAR SU                        TRAPINSU91A8TRY
+PKART.E                         PLASTIKKART                     TREPKRT00018TRY
+PKART.E                         PLASTIKKART                     TREPKRT00018TRY
+PKENT.E                         PETROKENT TURIZM                TRAPKENT91K5TRY
+PKENT.E                         PETROKENT TURIZM                TRAPKENT91K5TRY
+PNSUT.E                         PINAR SUT                       TRAPNSUT91A5TRY
+PNSUT.E                         PINAR SUT                       TRAPNSUT91A5TRY
+PNLSN.E                         PANELSAN CATI CEPHE             TREPNLS00017TRY
+PNLSN.E                         PANELSAN CATI CEPHE             TREPNLS00017TRY
+POLHO.E                         POLISAN HOLDING                 TREPOHO00012TRY
+POLHO.E                         POLISAN HOLDING                 TREPOHO00012TRY
+POLTK.E                         POLITEKNIK METAL                TREPOLT00013TRY
+POLTK.E                         POLITEKNIK METAL                TREPOLT00013TRY
+PRDGS.E                         PARDUS GIRISIM                  TREPRDS00023TRY
+PRDGS.E                         PARDUS GIRISIM                  TREPRDS00023TRY
+PRKAB.E                         TURK PRYSMIAN KABLO             TRASMENS91H3TRY
+PRKAB.E                         TURK PRYSMIAN KABLO             TRASMENS91H3TRY
+PRKME.E                         PARK ELEK.MADENCILIK            TRAPRKTE91B5TRY
+PRKME.E                         PARK ELEK.MADENCILIK            TRAPRKTE91B5TRY
+PRZMA.E                         PRIZMA PRESS MATBAACILIK        TREPRZM00011TRY
+PRZMA.E                         PRIZMA PRESS MATBAACILIK        TREPRZM00011TRY
+PSDTC.E                         PERGAMON DIS TICARET            TREPERG00018TRY
+PSDTC.E                         PERGAMON DIS TICARET            TREPERG00018TRY
+PSGYO.E                         PASIFIK GMYO                    TREPSFK00023TRY
+PSGYO.E                         PASIFIK GMYO                    TREPSFK00023TRY
+QNBFB.E                         QNB FINANSBANK                  TRAFINBN91N3TRY
+QNBFB.E                         QNB FINANSBANK                  TRAFINBN91N3TRY
+QNBFL.E                         QNB FINANS FINANSAL KIRALAMA    TRAFFKRL91P0TRY
+QNBFL.E                         QNB FINANS FINANSAL KIRALAMA    TRAFFKRL91P0TRY
+QUAGR.E                         QUA GRANITE HAYAL YAPI          TREQAGR00022TRY
+QUAGR.E                         QUA GRANITE HAYAL YAPI          TREQAGR00022TRY
+RALYH.E                         RAL YATIRIM HOLDING             TRABISAS91B7TRY
+RALYH.E                         RAL YATIRIM HOLDING             TRABISAS91B7TRY
+RAYSG.E                         RAY SIGORTA                     TRARAYSG91O8TRY
+RAYSG.E                         RAY SIGORTA                     TRARAYSG91O8TRY
+RHEAG.E                         RHEA GIRISIM                    TRAVKFRS91Q0TRY
+RHEAG.E                         RHEA GIRISIM                    TRAVKFRS91Q0TRY
+RNPOL.E                         RAINBOW POLIKARBONAT            TRERNPL00027TRY
+RNPOL.E                         RAINBOW POLIKARBONAT            TRERNPL00027TRY
+RODRG.E                         RODRIGO TEKSTIL                 TRERDRT00019TRY
+RODRG.E                         RODRIGO TEKSTIL                 TRERDRT00019TRY
+ROYAL.E                         ROYAL HALI                      TRERHLI00016TRY
+ROYAL.E                         ROYAL HALI                      TRERHLI00016TRY
+RTALB.E                         RTA LABORATUVARLARI             TRERTAL00018TRY
+RTALB.E                         RTA LABORATUVARLARI             TRERTAL00018TRY
+RYGYO.E                         REYSAS GMYO                     TRERGYO00019TRY
+RYGYO.E                         REYSAS GMYO                     TRERGYO00019TRY
+RUBNS.E                         RUBENIS TEKSTIL                 TRERBNS00014TRY
+RUBNS.E                         RUBENIS TEKSTIL                 TRERBNS00014TRY
+RYSAS.E                         REYSAS LOJISTIK                 TREREYS00015TRY
+RYSAS.E                         REYSAS LOJISTIK                 TREREYS00015TRY
+SAFKR.E                         SAFKAR EGE SOGUTMACILIK         TRESFEK00027TRY
+SAFKR.E                         SAFKAR EGE SOGUTMACILIK         TRESFEK00027TRY
+SAHOL.E                         SABANCI HOLDING                 TRASAHOL91Q5TRY
+SAHOL.E                         SABANCI HOLDING                 TRASAHOL91Q5TRY
+SAMAT.E                         SARAY MATBAACILIK               TRESRAY00013TRY
+SAMAT.E                         SARAY MATBAACILIK               TRESRAY00013TRY
+SANEL.E                         SANEL MUHENDISLIK               TRESNEL00011TRY
+SANEL.E                         SANEL MUHENDISLIK               TRESNEL00011TRY
+SANFM.E                         SANIFOAM ENDUSTRI               TRESNFM00016TRY
+SANFM.E                         SANIFOAM ENDUSTRI               TRESNFM00016TRY
+SANKO.E                         SANKO PAZARLAMA                 TRASANKO91I2TRY
+SANKO.E                         SANKO PAZARLAMA                 TRASANKO91I2TRY
+SARKY.E                         SARKUYSAN                       TRASARKY91G6TRY
+SARKY.E                         SARKUYSAN                       TRASARKY91G6TRY
+SASA.E                          SASA POLYESTER                  TRASASAW91E4TRY
+SASA.E                          SASA POLYESTER                  TRASASAW91E4TRY
+SAYAS.E                         SAY YENILENEBILIR ENERJI        TRESAYR00013TRY
+SAYAS.E                         SAY YENILENEBILIR ENERJI        TRESAYR00013TRY
+SDTTR.E                         SDT UZAY VE SAVUNMA             TRESDTT00013TRY
+SDTTR.E                         SDT UZAY VE SAVUNMA             TRESDTT00013TRY
+SEGYO.E                         SEKER GMYO                      TRESKGY00015TRY
+SEGYO.E                         SEKER GMYO                      TRESKGY00015TRY
+SEKFK.E                         SEKER FIN. KIR.                 TRESKFK00016TRY
+SEKFK.E                         SEKER FIN. KIR.                 TRESKFK00016TRY
+SEKUR.E                         SEKURO PLASTIK                  TRESKPA00016TRY
+SEKUR.E                         SEKURO PLASTIK                  TRESKPA00016TRY
+SELEC.E                         SELCUK ECZA DEPOSU              TRESLEC00014TRY
+SELEC.E                         SELCUK ECZA DEPOSU              TRESLEC00014TRY
+SELGD.E                         SELCUK GIDA                     TRASELGD91A6TRY
+SELGD.E                         SELCUK GIDA                     TRASELGD91A6TRY
+SELVA.E                         SELVA GIDA                      TRESLVA00020TRY
+SELVA.E                         SELVA GIDA                      TRESLVA00020TRY
+SEYKM.E                         SEYITLER KIMYA                  TRESEYT00011TRY
+SEYKM.E                         SEYITLER KIMYA                  TRESEYT00011TRY
+SILVR.E                         SILVERLINE ENDUSTRI             TRESLVR00016TRY
+SILVR.E                         SILVERLINE ENDUSTRI             TRESLVR00016TRY
+SISE.E                          SISE CAM                        TRASISEW91Q3TRY
+SISE.E                          SISE CAM                        TRASISEW91Q3TRY
+SKBNK.E                         SEKERBANK                       TRASKBNK91N8TRY
+SKBNK.E                         SEKERBANK                       TRASKBNK91N8TRY
+SKTAS.E                         SOKTAS                          TRASKTAS91B5TRY
+SKTAS.E                         SOKTAS                          TRASKTAS91B5TRY
+SKYMD.E                         SEKER YATIRIM                   TRESKMD00017TRY
+SKYMD.E                         SEKER YATIRIM                   TRESKMD00017TRY
+RYSAS.R                         REYSAS LOJISTIK  - RHKP         TRRREYS00033TRY
+RYSAS.R                         REYSAS LOJISTIK  - RHKP         TRRREYS00033TRY
+SEKUR.R                         SEKURO PLASTIK  - RHKP                      TRY
+SEKUR.R                         SEKURO PLASTIK  - RHKP                      TRY
+Market processor handler finished for partition: 3
+Market Processor Thread joined3
+Total number of instruments: 154
+Server started. Waiting for connections...
+last deleted is 0
+Waiting for a client connection...
+Interrupt signal (2) received. Stopping the gateway...

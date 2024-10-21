@@ -23,6 +23,7 @@
 #include <fstream>
 #include <fcntl.h>
 #include </opt/itchTest/InstrumentCreater/instrumentDefinitions.h>
+#include <unordered_map>
 
 #ifdef __CYGWIN__
 #define pthread_setname_np(...) ;
@@ -34,66 +35,22 @@
 
 #define OUTPUT_DEBUG_FILE
 
-InstrumentCreater::InstrumentCreater(int part)
+InstrumentCreater::InstrumentCreater(int part, int* gatewayInstrumentCount, std::unordered_map<unsigned int,Instrument*>* marketMap, std::vector<unsigned int>* orderBookIds, std::condition_variable* cv, std::mutex* mtx)
+    : partition(part), gatewayInstrumentCount(gatewayInstrumentCount), marketMapByOrderBookId(marketMap),orderBookIds(orderBookIds), cv(cv), mtx(mtx) 
 {
-    //start everything
 	_continue = 1;
-	//sequence set
 	_lastHbSequence = 1;
 	_nextProcessSequence = 1;
-	//rewinder set
-	//_rewinderStart = 0;
-	//_rewinderStartSequence = 1;
-	//_rewinderEndSequence = 1;
-
-	
-	//mutexes ready
-	//pthread_mutex_init(&_rewinderMutex, 0);
-	//pthread_cond_init(&_rewinderCond, 0);
-	//set buffers
+	_instFileBuffer = (char*) realloc(_instFileBuffer, bufferSize);
 	memset(_buffer, 0, sizeof(_buffer));
-	//memset(_rewinderBuffer, 0, sizeof(_rewinderBuffer));
 	memset(_itchMessageList, 0, sizeof(_itchMessageList));
-	//memset(&_rewinderMessage, 0, sizeof(_rewinderMessage));
-	//set pointers
 	_bufferPtr = _buffer;
-	//_rewinderBufferPtr = _rewinderBuffer;
-	//set output file
 	outputFile = 0;
-	//thread set
-	//_multicastThread = 0;
-	_processorThread = 0;
-	//_rewinderThread = 0;
-	
-	//set sockets
-	//_multicastSocket = 0;
-	//_rewinderSocket = 0;
+	_marketProcessorThread = 0;
     std::string basePath = "/opt/itchTest/Configs/InstrumentCreater/InstrumentCreater";
     std::string fileExtension = ".config";
-
     configFile = basePath + std::to_string(part) + fileExtension;
     configFile = basePath + std::to_string(part) + fileExtension;
-	//directory = configManager.readConfig(configFile, "directory");
-    //rewinderPort = std::stoi(configManager.readConfig(configFile, "rewinderPort"));
-    //rewinderLocalIp = configManager.readConfig(configFile, "rewinderLocalIp");
-    //multicastPort = std::stoi(configManager.readConfig(configFile, "multicastPort"));
-    //multicastLocalIp = configManager.readConfig(configFile, "multicastLocalIp");
-    //multicastRemoteIp = configManager.readConfig(configFile, "multicastRemoteIp");
-    //rewinderRemoteIp = configManager.readConfig(configFile, "rewinderRemoteIp");
-	//printf("\n");
-	//printf(rewinderLocalIp);
-	//printf("\n");
-	//printf(rewinderRemoteIp);
-	//printf("\n");
-	//printf("%d",rewinderPort);
-	//printf("\n");
-	//printf(multicastLocalIp);
-	//printf("\n");
-	//printf(multicastRemoteIp);
-	//printf("\n");
-	//printf("%d",multicastPort);
-	//printf("\n");
-    //get partition
 	partition = part;
 }
 static void *startMulticastThread(void *obj)
@@ -102,9 +59,9 @@ static void *startMulticastThread(void *obj)
 	return 0;
 }
 
-static void *startProcessorThread(void *obj)
+static void *startMarketProcessorThread(void *obj)
 {
-	((InstrumentCreater*) obj)->processorThreadHandler();
+	((InstrumentCreater*) obj)->marketInstrumentsProcessorHandler();
 	return 0;
 }
 
@@ -117,63 +74,18 @@ static void *startRewinderThread(void *obj)
 
 int InstrumentCreater::init()
 {
-    sender->init();
-	//CREATE SOCKETS
-	//create multicast socket
-	//_multicastSocket = Lib::CConnection::createUdpMulticastSocket(multicastRemoteIp, multicastPort, multicastLocalIp);
-	//if (_multicastSocket  <= 0)
-	//{
-	//	std::cerr << "Multicast Socket NOT created " << _multicastSocket  << std::endl;
-	//	return -1;
-	//}
-	//else
-	//{
-	//	std::cout << "Multicast Socket created " << _multicastSocket  << std::endl; 
-	//}
-	//create rewinder socket
-	//_rewinderSocket = Lib::CConnection::createUdpSocket(rewinderLocalIp, 5);
-	//if (_rewinderSocket < 0)
-	//{
-	//	std::cerr << "Rewinder Socket NOT created " << _multicastSocket  << std::endl;
-	//	return -2;
-	//}
-	//else
-	//{
-	//	std::cout << "Rewinder Socket created " << _multicastSocket  << std::endl; 
-	//}
-	//START THREADS//
-	//start multicast thread
-	
-	
-	//if (pthread_create(&_multicastThread, nullptr, startMulticastThread, this)< 0)
-	//{
-		//std::cerr << "Multicast Thread not created " << _multicastSocket  << std::endl;
-	//}
-	//else
-	//{
-	//	std::cout << "Multicast Thread created" << std::endl;
-	//}
-	//start rewinder thread
-	//if (pthread_create(&_rewinderThread, 0, startRewinderThread, this) < 0)
-	//{
-	//	std::cerr << "Rewinder Thread not created " << _multicastSocket  << std::endl;
-	//}
-	//else
-	//{
-	//	std::cout << "Rewinder Thread created" << std::endl;
-	//}
-	//start processor thread
-	if (pthread_create(&_processorThread, nullptr, startProcessorThread, this) < 0)
+	if (pthread_create(&_marketProcessorThread, nullptr, startMarketProcessorThread, this) < 0)
 	{
-		std::cerr << "Processor Thread not created " << _multicastSocket  << std::endl;
+		std::cerr << "Market Processor Thread not created " << _multicastSocket  << std::endl;
 	}
 	else
 	{
-		std::cout << "Processor Thread created" << std::endl;
+		std::cout << "Market Processor Thread created" << partition<<std::endl;
 	}
 	
 	return 0;
 }
+//Function to read ITCH market data from files for each partition.
 void InstrumentCreater::setMarketInstruments(const char *filename)
 {
 	int hasOldData = 0;
@@ -189,7 +101,6 @@ void InstrumentCreater::setMarketInstruments(const char *filename)
 		fseek(f, 0, SEEK_END);
 		ulong fileSize = ftell(f);
 		fseek(f, 0, SEEK_SET);
-		
 		fread(_buffer, fileSize, 1, f);
 		fclose(f);
 		Itch::TItchBlock *block = (Itch::TItchBlock*) _buffer;
@@ -202,12 +113,9 @@ void InstrumentCreater::setMarketInstruments(const char *filename)
 		ushort messageLength = 0;
 		while (((char*)block) - _buffer < fileSize)
 		{
-			
 			sequence = be64toh(block->sequenceNumber);
 			_lastHbSequence = sequence;
 			messageCount = be16toh(block->messageCount);
-			//printf("Multicast Seq Num %d\n",sequence);
-			//printf("Multicast Message count %d\n",messageCount);
 			firstMessage = _itchMessageList + sequence;
 			lastSequence = sequence + htobe16(block->messageCount);
 			firstMessage->lastMessage = _itchMessageList + lastSequence - 1;
@@ -226,21 +134,25 @@ void InstrumentCreater::setMarketInstruments(const char *filename)
 		}
 		_bufferPtr = bufferPtr;
 	}
+	else if (!f) {
+        std::cerr << "Error opening file: " << filename << std::endl;
+        return;  // Return early if file is not found
+    }
 	lastMessageFromFile = sequence;
-	
+}
+
+bool InstrumentCreater::isFinished() {
+    return finished;
 }
 void InstrumentCreater::start()
 {
 	char filename[1024] = {0};
 	char timestamp[9] = {0};  
-	// Get the current time
 	time_t now = time(NULL);
 	struct tm *t = localtime(&now);
-
-	// Format the date as YYYYMMDD
 	strftime(timestamp, sizeof(timestamp), "%Y%m%d", t);
 	sprintf(filename, "/opt/itchTest/itchFiles/itch.%d.%s.dat",partition,timestamp);
-	printf("Opening file for writing: ");
+	printf("Opening file for reading market instrument info: ");
 	printf(filename);
 	printf("\n");
 	setMarketInstruments(filename);
@@ -253,48 +165,254 @@ void InstrumentCreater::stop()
 }
 void InstrumentCreater::startConnect()
 {
-	
-	//if (pthread_join(_multicastThread, nullptr))
-    //{
-        //std::cerr << "Failed to join multicast thread. Error: " << strerror(errno) << std::endl;
-    //}
-	//else
-	//{
-		//std::cout << "Multicast Thread Joined" << std::endl;
-	//}
-
-	//if (pthread_join(_rewinderThread, nullptr))
-    //{
-        //std::cerr << "Failed to join rewinder thread. Error: " << strerror(errno) << std::endl;
-    //}
-	//else
-	//{
-		//std::cout << "Rewinder Thread created" << std::endl;
-	//}
-
-	if (pthread_join(_processorThread, nullptr))
+	if (pthread_join(_marketProcessorThread, nullptr))
     {
-        std::cerr << "Failed to Processor thread. Error: " << strerror(errno) << std::endl;
+		std::cerr << "Failed to join market processor thread. Error: " << strerror(errno) << std::endl;
     }
 	else
 	{
-		std::cout << "Processor Thread created" << std::endl;
+		std::cout << "Market Processor Thread joined" <<partition<< std::endl;
 	}
-		
 }
 void InstrumentCreater::disconnect()
 {
 	_continue = 0;
-	if (_multicastSocket > 0)
-	{
-		close(_multicastSocket);
-		_multicastSocket = 0;
-	}
-	if (_rewinderSocket > 0)
-	{
-		close(_rewinderSocket);
-		_rewinderSocket = 0;
-	}
+}
+
+
+void InstrumentCreater::marketInstrumentsProcessorHandler()
+{
+    std::unique_lock<std::mutex> lock(*mtx);
+    Itch::TItchMessage *msg = _itchMessageList + _nextProcessSequence;
+    Itch::TItchMessage *lastMsg = 0;
+    Itch::TItchMessage *afterLastMsg = 0;
+    Itch::TItchMessageBase *msgBase = 0;
+    int orderBookId = 0;
+    char lastInst[32];
+    int lastOrderBookId;
+    while (_continue) // check while loop
+    {
+
+        if (_nextProcessSequence >= lastMessageFromFile)
+        {
+            finished = true;
+            cv->notify_one();
+            break;
+        }
+        else
+        {
+            if (msg->state == Itch::EItchMessageState::None)
+            {
+                if (_nextProcessSequence < _lastHbSequence)
+                {
+                    if (_rewinderRunning)
+                        continue;
+                }
+                continue;
+            }
+            lastMsg = msg->lastMessage;
+            if (!lastMsg)
+            {
+                continue;
+            }
+            while (lastMsg->state == Itch::EItchMessageState::None && _continue) 
+                ;
+            if (!_continue)
+                break;
+            afterLastMsg = lastMsg + 1;
+            while (msg != afterLastMsg)
+            {
+				msgBase = (Itch::TItchMessageBase *)msg->addr;
+                int totalMessagesInBlock = afterLastMsg - msg;
+
+                switch (msgBase->type)
+                {
+                    case ITCH_MESSAGE_TYPE_ORDERBOOKDIRECTORY:
+					{
+						//Instrument info 
+						Itch::TItchMessageOrderBookDirectory *m = (Itch::TItchMessageOrderBookDirectory *)msgBase;
+						orderBookId = htobe32(m->orderBookId);
+						
+						auto it = marketMapByOrderBookId->find(orderBookId);
+						if (it != marketMapByOrderBookId->end()) 
+						{
+							//Some orderbookids duplicate ignore if 
+							Instrument* existingInstrument = it->second;
+							_tickSizeIndex = 0;
+							break;
+						}
+						Instrument* instrument = new Instrument();
+						instrument->isActive = 0;
+						instrument->orderBookId = orderBookId;
+						char output[32];
+						memset(output, 0, sizeof(output));
+						size_t i = 0;
+                        while (m->symbol[i] != '.' && m->symbol[1] != '\0' && i < sizeof(m->symbol) - 1)
+                        {
+                            output[i] = m->symbol[i];
+                            i++;
+                        }
+						// Parse symbol and assign appropriate title
+						//Instruments with titles .E, .F and  F_ 
+						if ((m->symbol[i] == '.' && (m->symbol[i + 1] == 'E' || m->symbol[i + 1] == 'R')) && !(m->symbol[0] == 'O' && m->symbol[1] == '_'))
+						{
+							(*gatewayInstrumentCount)++;
+							 instrument->id = *gatewayInstrumentCount;
+                            std::strncpy(instrument->internalName, output, sizeof(instrument->internalName));
+                            output[i] = '.';
+                            output[i + 1] = 'E';
+                            std::strncpy(instrument->title, output, sizeof(instrument->title));
+							instrument->decimalsInPrice = be16toh(m->decimalsInPrice);
+							instrument->instrumentType = EInstrumentType::Equity;
+                            instrument->orderBookType = EOrderBookType::None;
+                            instrument->marketGatewayType = EGatewayType::BistechItch;
+                            instrument->marketGatewayNo = partition;
+                            instrument->orderGatewayType = EGatewayType::BistechFpgaOrder;
+                            instrument->originalOrderGatewayNo = 0;
+							instrument->contractSize = 1;
+                            for (int i = 0; i < 10; ++i)
+                            {
+                                instrument->orderGroupGatewayIdxList[i] = i;
+                            }
+							_tickSizeIndex = 0;  
+                            instrument->quantityMultiplier = 1;
+                            instrument->allowShortSell = 0;
+							instrument->nearLegOrderBookId =0;
+							instrument->farLegOrderBookId = 0;
+							instrument->leggedInstrument = 0;
+							instrument->fpgaSessionNo = 1;
+							(*marketMapByOrderBookId)[instrument->orderBookId] = instrument;
+							orderBookIds->push_back(instrument->orderBookId);
+						}
+						else if ((m->symbol[i] == '.' && m->symbol[i + 1] == 'F') || (m->symbol[0] == 'F' && m->symbol[1] == '_'))
+						{
+							(*gatewayInstrumentCount)++;
+							instrument->id = *gatewayInstrumentCount;
+                            std::strncpy(instrument->internalName, output, sizeof(instrument->internalName));
+                            if (!(m->symbol[0] == 'F' && m->symbol[1] == '_'))  // Only add .F if it does NOT start with F_
+							{
+								output[i] = '.';
+								output[i + 1] = 'F';
+							}
+                            std::strncpy(instrument->title, output, sizeof(instrument->title));
+							instrument->decimalsInPrice = be16toh(m->decimalsInPrice);
+							instrument->instrumentType = EInstrumentType::Future;
+                            instrument->orderBookType = EOrderBookType::None;
+                            instrument->marketGatewayType = EGatewayType::BistechItch;
+                            instrument->marketGatewayNo = partition;
+                            instrument->orderGatewayType = EGatewayType::BistechFpgaOrder;
+							instrument->originalOrderGatewayNo = 0;
+							instrument->contractSize = 1;
+                            for (int i = 0; i < 10; ++i)
+                            {
+                                instrument->orderGroupGatewayIdxList[i] = i;
+                            }
+                            instrument->quantityMultiplier = 1;
+                            instrument->allowShortSell = 0;
+							instrument->nearLegOrderBookId = 0;
+							instrument->farLegOrderBookId = 0;
+							instrument->leggedInstrument = 0;
+							instrument->fpgaSessionNo = 2;
+                            _tickSizeIndex = 0;
+							(*marketMapByOrderBookId)[instrument->orderBookId] = instrument;
+							orderBookIds->push_back(instrument->orderBookId);
+						}
+						else
+						{
+						}
+						break;
+					}
+                    case ITCH_MESSAGE_TYPE_TICKTABLEENTRY:
+					{
+						Itch::TItchMessagePriceTickTableEntry *m = (Itch::TItchMessagePriceTickTableEntry *)msgBase;
+						unsigned int orderBookId = htobe32(m->orderBookId);
+						Instrument* lastInstrument =nullptr;
+						auto it = marketMapByOrderBookId->find(orderBookId);
+						if (it != marketMapByOrderBookId->end()) 
+						{
+							lastInstrument = it->second;
+							if (!lastInstrument) 
+							{
+								std::cerr << "Instrument for orderBookId " << orderBookId << " not found!" << std::endl;
+								break;
+							}
+							if (_tickSizeIndex < 10) 
+							{
+								if (htobe32(m->priceFrom) != 0 && htobe32(m->priceTo) != 0) 
+								{
+									lastInstrument->tickSizeMap[_tickSizeIndex] = {
+										(int)htobe32(m->priceFrom), 
+										(int)htobe32(m->priceTo), 
+										(int)htobe64(m->tickSize)
+									};
+									_tickSizeIndex++;
+								}
+							} 
+							else 
+							{
+								std::cerr << "Tick size index out of bounds for orderBookId " << orderBookId << std::endl;
+							}
+						} 
+						else 
+						{
+
+						}
+						break;
+					}
+                }
+				
+                msg->state = Itch::EItchMessageState::Processed;
+                msg++;
+                _nextProcessSequence++;
+            }
+        }
+    }
+    std::cout << "Market processor handler finished for partition: " << partition << std::endl;
+}
+
+
+
+void InstrumentCreater::multicastThreadHandler()
+{
+    int readLen = 0;
+	ulong sequence = 0;
+	ulong lastSequence = 0;
+	ushort messageCount = 0;
+	char *msgAddr = 0;
+	ushort messageLength = 0;
+	Itch::TItchMessage *firstMessage = 0;
+	Itch::TItchMessage *msg = 0;
+	Itch::TItchMessageBase *msgBase = 0;
+	int isFirstMessage = 1;
+    while (_continue)
+    {
+        readLen = read(_multicastSocket, _bufferPtr, 65536);
+		if (!_continue) break;
+        if (readLen > 0)
+        {
+            Itch::TItchBlock *block = (Itch::TItchBlock*) _bufferPtr;
+			sequence = be64toh(block->sequenceNumber);
+			messageCount = be16toh(block->messageCount);
+            //multiMessageCount = sequence;
+            if (isFirstMessage)
+			{
+				memcpy(_rewinderMessage.session, block->session, sizeof(_rewinderMessage.session));
+				isFirstMessage = 0;
+			}
+            _lastHbSequence = sequence;
+            msgAddr = _bufferPtr + sizeof(Itch::TItchBlock);
+            //printf("Multicast Seq Num %d\n",sequence);
+			//printf("Multicast Message count %d\n",messageCount);
+            msg = _itchMessageList + sequence;
+            msgBase = (Itch::TItchMessageBase *)msgAddr;
+            messageLength = be16toh(msgBase->length);
+            msg->addr = msgAddr;
+            msg->state = Itch::EItchMessageState::Read;
+            _bufferPtr += readLen;
+            break;
+        }
+    }
+    
 }
 void InstrumentCreater::waitRewinder(ulong *startSequence, ulong *endSequence)
 {
@@ -409,203 +527,4 @@ void InstrumentCreater::rewinderThreadHandler()
 		
 	}
 }
-
-void InstrumentCreater::processorThreadHandler()
-{
-    
-    Itch::TItchMessage *msg = _itchMessageList + _nextProcessSequence;
-    Itch::TItchMessage *lastMsg = 0;
-    Itch::TItchMessage *afterLastMsg = 0;
-    Itch::TItchMessageBase *msgBase = 0;
-    int orderBookId = 0;
-    char lastInst[32];
-    while (_continue) // check while loop
-    {
-         if (_nextProcessSequence >= lastMessageFromFile)
-		 {
-			sendInstrumentsFlag = true;
-			sender->start();
-			break;
-		 }
-		 else
-		 {
-			if (msg->state == Itch::EItchMessageState::None) 
-            {
-                if (_nextProcessSequence < _lastHbSequence) 
-                {
-                    if (_rewinderRunning)
-                        continue;
-                    //startRewinder(_nextProcessSequence, _lastHbSequence);
-                }
-                continue;
-            }
-			
-            lastMsg = msg->lastMessage;
-            if (!lastMsg)
-            {
-                continue;
-            }
-            while (lastMsg->state == Itch::EItchMessageState::None && _continue) // check while
-                ;
-            if (!_continue)
-                break;
-            afterLastMsg = lastMsg + 1;
-
-            while (msg != afterLastMsg)
-            {
-                msgBase = (Itch::TItchMessageBase *)msg->addr;
-                int totalMessagesInBlock = afterLastMsg - msg;
-                
-            
-                switch (msgBase->type)
-                {
-                    case ITCH_MESSAGE_TYPE_ORDERBOOKDIRECTORY:
-                    {
-                        /*
-						if (!instruments.empty())
-                        {
-                            const Instrument &lastInstrument = instruments.back();
-							
-                            //std::cout << "Written instrument: name " << lastInstrument.title << std::endl;
-                            //std::cout << "Written instrument: name " << lastInstrument.internalName << std::endl;
-                            //std::cout << "Written instrument: name " << lastInstrument.orderBookId << std::endl;
-                            //std::cout << "Written instrument Prize From:  " << lastInstrument.tickSizeMap[2].start << std::endl;
-                            //std::cout << "Written instrument: Prize To: " << lastInstrument.tickSizeMap[2].end << std::endl;
-                            //std::cout << "Written instrument: Tick Size: " << lastInstrument.tickSizeMap[2].tickSize << std::endl;
-                            //std::cout <<std::endl;
-                        }
-						*/
-						
-                        Itch::TItchMessageOrderBookDirectory *m = (Itch::TItchMessageOrderBookDirectory *)msgBase;
-                        instrumentCount = instrumentCount + 1;
-                        orderBookId = htobe32(m->orderBookId);
-                        int arderBookId = be32toh(m->orderBookId);
-                        Instrument instrument;
-                        instrument.id = instrumentCount;
-                        instrument.orderBookId = be32toh(m->orderBookId);
-                        char output[32];
-                        memset(output, 0, sizeof(output));
-                        size_t i = 0;
-
-                        while (m->symbol[i] != '.' && m->symbol[i] != '\0' && i < sizeof(m->symbol) - 1) 
-                        {
-                            output[i] = m->symbol[i];
-                            i++;
-                        }
-                        if (m->symbol[i + 1] == 'E') // check if
-                        {
-                            std::strncpy(instrument.internalName, output, sizeof(instrument.internalName));
-                            output[i] = '.';
-                            output[i + 1] = 'E';
-                            std::strncpy(instrument.title, output, sizeof(instrument.internalName));
-                            instrument.instrumentType = EInstrumentType::Equity;
-							//None diye doldur            
-                            instrument.orderBookType = EOrderBookType::Full;                
-                            instrument.marketGatewayType = EGatewayType::BistechFpgaMarket; 
-                            instrument.marketGatewayNo = 1;
-                            instrument.orderGatewayType = EGatewayType::BistechFpgaOrder; 
-                            instrument.originalOrderGatewayNo = 1;
-                            for (int i = 0; i < 10; ++i) 
-                            {
-                                instrument.orderGroupGatewayIdxList[i] = i;
-                            }
-                            instrument.decimalsInPrice = be16toh(m->decimalsInPrice);
-                            instrument.quantityMultiplier = 1;
-                            instrument.allowShortSell = 0;
-                            _tickSizeIndex = 0;
-                            instruments.push_back(instrument);
-                        }
-                        else if (m->symbol[i + 1] == 'F') // check else if
-                        {
-                            std::strncpy(instrument.internalName, output, sizeof(instrument.internalName)); 
-                            output[i] = '.';
-                            output[i + 1] = 'F';
-                            std::strncpy(instrument.title, output, sizeof(instrument.internalName));
-                            instrument.instrumentType = EInstrumentType::Equity;            
-                            instrument.orderBookType = EOrderBookType::None;                
-                            instrument.marketGatewayType = EGatewayType::BistechFpgaMarket; 
-                            instrument.marketGatewayNo = 1;
-                            instrument.orderGatewayType = EGatewayType::BistechFpgaOrder; 
-                            instrument.originalOrderGatewayNo = 1;
-                            for (int i = 0; i < 10; ++i) 
-                            {
-                                instrument.orderGroupGatewayIdxList[i] = i;
-                            }
-                            instrument.decimalsInPrice = be16toh(m->decimalsInPrice);
-                            instrument.quantityMultiplier = 1;
-                            instrument.allowShortSell = 0;
-                            _tickSizeIndex = 0;
-                            instruments.push_back(instrument);
-                        }
-                        break;
-                    }
-                    case ITCH_MESSAGE_TYPE_TICKTABLEENTRY:
-                    {
-                        Itch::TItchMessagePriceTickTableEntry *m = (Itch::TItchMessagePriceTickTableEntry *)msgBase;
-                        Instrument &lastInstrument = instruments.back();
-                        if (be16toh(m->priceFrom) != 0 && be16toh(m->priceTo) != 0) // check if
-                        {
-                            lastInstrument.tickSizeMap[_tickSizeIndex] = {be16toh(m->priceFrom), be16toh(m->priceTo), be16toh(m->tickSize)};
-                            _tickSizeIndex = _tickSizeIndex + 1;
-                        }
-                        else // check else
-                        {
-                        }
-                        break;
-                    }
-                }
-                
-                msg->state = Itch::EItchMessageState::Processed;
-                msg++;
-                _nextProcessSequence++;
-            }
-		 }        
-    }     
-}
-
-
-
-void InstrumentCreater::multicastThreadHandler()
-{
-    int readLen = 0;
-	ulong sequence = 0;
-	ulong lastSequence = 0;
-	ushort messageCount = 0;
-	char *msgAddr = 0;
-	ushort messageLength = 0;
-	Itch::TItchMessage *firstMessage = 0;
-	Itch::TItchMessage *msg = 0;
-	Itch::TItchMessageBase *msgBase = 0;
-	int isFirstMessage = 1;
-    while (_continue)
-    {
-        readLen = read(_multicastSocket, _bufferPtr, 65536);
-		if (!_continue) break;
-        if (readLen > 0)
-        {
-            Itch::TItchBlock *block = (Itch::TItchBlock*) _bufferPtr;
-			sequence = be64toh(block->sequenceNumber);
-			messageCount = be16toh(block->messageCount);
-            //multiMessageCount = sequence;
-            if (isFirstMessage)
-			{
-				memcpy(_rewinderMessage.session, block->session, sizeof(_rewinderMessage.session));
-				isFirstMessage = 0;
-			}
-            _lastHbSequence = sequence;
-            msgAddr = _bufferPtr + sizeof(Itch::TItchBlock);
-            //printf("Multicast Seq Num %d\n",sequence);
-			//printf("Multicast Message count %d\n",messageCount);
-            msg = _itchMessageList + sequence;
-            msgBase = (Itch::TItchMessageBase *)msgAddr;
-            messageLength = be16toh(msgBase->length);
-            msg->addr = msgAddr;
-            msg->state = Itch::EItchMessageState::Read;
-            _bufferPtr += readLen;
-            break;
-        }
-    }
-    
-}
-
 

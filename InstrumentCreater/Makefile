@@ -1,10 +1,10 @@
 CC=g++
 CFLAGS=-Wall -w
 LFLAGS=
-SRCS=InstrumentCreater.cpp connection.cpp instrumentCreater.cpp server.cpp /opt/itchTest/Configs/configuration.cpp
+SRCS=InstrumentHandler.cpp utils.cpp connection.cpp instrumentCreater.cpp instrumentSender.cpp instrumentGateway.cpp /opt/itchTest/Configs/configuration.cpp
 OBJS=$(patsubst %.cpp, objs/%.o, $(SRCS))
 INCLUDES=
-MAIN=InstrumentCreater
+MAIN=InstrumentHandler
 LIBS=
 
 .PHONY: depend clean

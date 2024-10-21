@@ -4,7 +4,8 @@
  *  Created on: Jul 19, 2018
  *      Author: Osman
  */
-
+#ifndef KHASH_INT_H  // Unique identifier for the file
+#define KHASH_INT_H
 
 #include <fstream>;
 #include <stdlib.h>
@@ -450,4 +451,4 @@ namespace Lib
 	}
 }
 
-
+#endif 
